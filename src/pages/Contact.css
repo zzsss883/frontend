@@ -1,0 +1,244 @@
+/* ========================================
+   CONTACT PAGE - APPLE DESIGN
+   ======================================== */
+
+.contact-page {
+  padding: 4rem 0 6rem;
+  min-height: calc(100vh - 75px);
+  background: var(--bg-primary);
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Contact Form Card */
+.contact-form-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--apple-gray-4);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Submit Status */
+.submit-status {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  letter-spacing: -0.016em;
+}
+
+.submit-status.success {
+  background: rgba(52, 199, 89, 0.1);
+  border: 1px solid var(--apple-green);
+  color: var(--apple-green);
+}
+
+.submit-status.error {
+  background: rgba(255, 59, 48, 0.1);
+  border: 1px solid var(--apple-red);
+  color: var(--apple-red);
+}
+
+/* Contact Info Section */
+.contact-info {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--apple-gray-5);
+  position: relative;
+}
+
+.contact-info h3 {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.contact-info h3::before {
+  content: '';
+  display: none;
+}
+
+.contact-info h3::after {
+  content: '';
+  display: none;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--apple-gray-4);
+  border-radius: var(--radius-md);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.contact-link:hover {
+  background: var(--apple-gray-6);
+  border-color: var(--apple-gray-3);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-link-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--apple-gray-6);
+  border: 1px solid var(--apple-gray-4);
+  font-size: 1.25rem;
+  color: var(--apple-blue);
+  transition: all 0.2s ease;
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.contact-link:hover .contact-link-icon {
+  background: var(--apple-blue);
+  color: white;
+  border-color: var(--apple-blue);
+  transform: scale(1.1);
+}
+
+.contact-link-content {
+  flex: 1;
+}
+
+.contact-link-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.contact-link-label::before {
+  content: '';
+  display: none;
+}
+
+.contact-link-value {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* Status Indicator */
+.status-online {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+  font-size: 0.75rem;
+  color: var(--apple-green);
+  margin-left: auto;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.status-online::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--apple-green);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 2rem 0 4rem;
+  }
+
+  .contact-form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-link {
+    padding: 1rem 1.25rem;
+  }
+
+  .contact-link-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+
+  .status-online {
+    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-info {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .contact-link {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .contact-link-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .status-online {
+    margin-top: 0.5rem;
+  }
+}

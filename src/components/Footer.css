@@ -1,0 +1,243 @@
+/* ========================================
+   APPLE-STYLE FOOTER
+   ======================================== */
+
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--apple-gray-5);
+  color: var(--text-secondary);
+  padding: 60px 0 32px;
+  margin-top: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer {
+    background: var(--bg-secondary);
+    border-top-color: var(--apple-gray-4);
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* Footer Logo */
+.footer-logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+}
+
+.footer-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  text-align: center;
+  max-width: 480px;
+  line-height: 1.47059;
+  letter-spacing: -0.016em;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 32px;
+  margin-top: 8px;
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: -0.016em;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--apple-blue);
+}
+
+/* Social Icons */
+.footer-social {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+  color: var(--apple-blue);
+  transform: scale(1.1);
+}
+
+.social-icon.github:hover {
+  color: var(--text-primary);
+}
+
+.social-icon.twitter:hover {
+  color: var(--apple-blue);
+}
+
+.social-icon.linkedin:hover {
+  color: var(--apple-blue);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--apple-gray-5);
+  text-align: center;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .footer-bottom {
+    border-top-color: var(--apple-gray-4);
+  }
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+}
+
+.footer-bottom a {
+  color: var(--apple-blue);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  opacity: 0.7;
+}
+
+/* Tech Badge */
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 6px 12px;
+  background: var(--apple-gray-6);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  letter-spacing: -0.01em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tech-badge {
+    background: var(--apple-gray-5);
+  }
+}
+
+.tech-badge span {
+  color: var(--apple-blue);
+  font-weight: 600;
+}
+
+/* System Status Indicator */
+.system-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--apple-green);
+  letter-spacing: -0.01em;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--apple-green);
+  border-radius: 50%;
+  animation: status-pulse 2s infinite;
+}
+
+@keyframes status-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 0 24px;
+  }
+
+  .footer-content {
+    padding: 0 16px;
+  }
+
+  .footer-logo {
+    font-size: 21px;
+  }
+
+  .footer-subtitle {
+    font-size: 14px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-social {
+    margin-top: 12px;
+  }
+
+  .social-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .footer-bottom {
+    margin-top: 32px;
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-subtitle {
+    font-size: 13px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .footer-link {
+    font-size: 13px;
+  }
+}
